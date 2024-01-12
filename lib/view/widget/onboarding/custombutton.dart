@@ -26,5 +26,5 @@ class CustomButtonOnBoarding extends GetView<OnBoardingControllerImp>{
 
     );
   }
-  }
+}
 
