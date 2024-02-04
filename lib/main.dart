@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_ecommerce/core/localization/changelocal.dart';
 import 'package:flutter_app_ecommerce/core/services/services.dart';
+import 'package:flutter_app_ecommerce/test.dart';
 import 'package:flutter_app_ecommerce/view/screen/language.dart';
 import 'package:flutter_app_ecommerce/view/screen/onboarding.dart';
 import 'package:get/get.dart';
@@ -39,7 +40,10 @@ class MyApp extends StatelessWidget {
               height:2,color:AppColor.grey,fontSize: 14),
         ),
       ),
-      home:const Language(),
+      home:
+       //Test(),
+
+      const Language(),
       routes: routes,
     );
   }

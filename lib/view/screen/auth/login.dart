@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_ecommerce/controller/auth/login_controller.dart';
 import 'package:flutter_app_ecommerce/core/constant/color.dart';
 import 'package:flutter_app_ecommerce/view/widget/auth/logoauth.dart';
+import 'package:flutter_app_ecommerce/view/widget/auth/textsignup.dart';
 import 'package:flutter_app_ecommerce/view/widget/language/custombuttomlang.dart';
+import 'package:get/get.dart';
 
 import 'package:get/get_utils/get_utils.dart';
 
@@ -17,47 +20,54 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    LoginControllerImp controller = Get.put(LoginControllerImp()) ;
     return Scaffold(
         appBar: AppBar(
             centerTitle:true,
             backgroundColor: AppColor.backgroundcolor,
             elevation: 0.0,
-            title: Text('Sign In', style:Theme.of(context).textTheme.headline1!.copyWith(color: AppColor.grey))
+            title: Text('9'.tr, style:Theme.of(context).textTheme.headline1!.copyWith(color: AppColor.grey))
         ),
         body: Container(
             padding: const EdgeInsets.symmetric(vertical: 15 , horizontal: 30),
             child:ListView(children: [
              const  LogoAuth(),
               // SizedBox(height: 20,) ,
-            const  CustomTextTitleAuth(text: "welcome Back" ,) ,
+              CustomTextTitleAuth(text: "10".tr ,) ,
              const  SizedBox(height: 10) ,
-             const  CustomTextBodyauth(text: "sign in with your email and password or continue with social media"),
+              CustomTextBodyauth(text: "11".tr),
              const  SizedBox(height: 15) ,
-             const CustomTextFormAuth(
+              CustomTextFormAuth(
+               mycontroller: controller.email ,
                 hinttext: "Enter your Email",
                 iconData: Icons.email_outlined ,
                 labeltext: "Email",
 
               ) ,
 
-            const   CustomTextFormAuth(
-                hinttext: "Enter your Password",
+              CustomTextFormAuth(
+                mycontroller: controller.password,
+                hinttext: "12".tr,
                 iconData: Icons.lock_outline,
-                labeltext: "password",
+                labeltext: "19".tr,
                 //mycontrller
               ) ,
-             const Text("forget password",textAlign:TextAlign.end
-                ,) ,
-              CustomButtomAuth(text:"Sign In",onPressed:(){},),
-            const  SizedBox(height: 30,),
-            const  Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Don't have an account ?"),
-                  InkWell(child: Text("Sign Up" , style: TextStyle(color:AppColor.primaryColor , fontWeight: FontWeight.bold )),
-                  )
-                ],
-              )
+             InkWell(
+               onTap:(){
+                 controller.goToForgetPassword();
+               },
+               child:  Text("14".tr,textAlign:TextAlign.end
+                  ,),
+             ) ,
+              CustomButtomAuth(text:"15".tr,onPressed:(){},),
+            const  SizedBox(height: 40,),
+             CustomTextSignUpOrSignIn(
+               textone: "16".tr,
+               texttwo: "17".tr,
+               onTap: (){
+                 controller.goToSignUp();
+               },
+             )
             ]),
         ),
 
