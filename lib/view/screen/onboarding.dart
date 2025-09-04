@@ -16,15 +16,16 @@ class OnBoarding extends StatelessWidget {
         body: SafeArea(
           child: Column( children: [
             Expanded(
-              flex: 3,
+              flex: 4,
               child: CustomSliderOnBoarding(),
             ),
+
             Expanded(
                 flex:1,
                 child: Column(
                   children: [
                     CustomDotControllerOnBoarding(),
-                    Spacer(flex: 2,),
+                    Spacer(flex:2,),
                     CustomButtonOnBoarding()
 
                   ],

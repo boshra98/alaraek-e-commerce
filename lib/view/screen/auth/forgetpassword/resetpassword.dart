@@ -22,7 +22,7 @@ class ResetPassword extends StatelessWidget {
           backgroundColor: AppColor.backgroundcolor,
           elevation: 0.0,
           title: Text(' ResetPassword ',
-              style:Theme.of(context).textTheme.headline1!.copyWith(color: AppColor.grey))
+              style:Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColor.grey))
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 15 , horizontal: 30),

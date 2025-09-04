@@ -23,7 +23,7 @@ class CheckEmail extends StatelessWidget {
           centerTitle:true,
           backgroundColor: AppColor.backgroundcolor,
           elevation: 0.0,
-          title: Text('27'.tr, style:Theme.of(context).textTheme.headline1!.copyWith(color: AppColor.grey))
+          title: Text('27'.tr, style:Theme.of(context).textTheme.displayLarge!.copyWith(color: AppColor.grey))
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 15 , horizontal: 30),
@@ -47,7 +47,7 @@ class CheckEmail extends StatelessWidget {
 
 
           CustomButtomAuth(text:"30".tr,onPressed:(){
-            controller.goToSuccessSignUp();
+            controller.goToVerfiyCode();
           },),
           const  SizedBox(height: 40,),
 

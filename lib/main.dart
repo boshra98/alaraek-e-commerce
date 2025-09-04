@@ -29,17 +29,7 @@ class MyApp extends StatelessWidget {
       translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
       locale:controller.language,
-      theme: ThemeData(
-        fontFamily: "playfairDisplay",
-        textTheme: const TextTheme(
-          headline1:  TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 20,color:AppColor.black) ,
-          bodyText1: TextStyle(
-              height:2,color:AppColor.grey,fontWeight: FontWeight.bold,fontSize: 17),
-          bodyText2: TextStyle(
-              height:2,color:AppColor.grey,fontSize: 14),
-        ),
-      ),
+      theme: controller.appTheme,
       home:
        //Test(),
 

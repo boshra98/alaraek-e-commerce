@@ -4,6 +4,7 @@ import 'package:flutter_app_ecommerce/controller/auth/verifycode_controller.dart
 import 'package:flutter_app_ecommerce/core/constant/color.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
+import '../../../../controller/auth/verifycodesignup_controller.dart';
 import '../../../widget/auth/custombuttomauth.dart';
 import '../../../widget/auth/customtextformauth.dart';
 import '../../../widget/auth/customtexttitleauth.dart';
@@ -11,12 +12,12 @@ import '../../../widget/auth/customtextbodyauth.dart';
 
 
 
-class VerifyCode extends StatelessWidget {
-  const VerifyCode({Key? key}) : super(key: key);
+class VerifyCodeSignUp extends StatelessWidget {
+  const VerifyCodeSignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    VerifyCodeControllerImp controller= Get.put(VerifyCodeControllerImp());
+    VerifyCodeSignUpControllerImp controller= Get.put(VerifyCodeSignUpControllerImp());
     return Scaffold(
       appBar: AppBar(
           centerTitle:true,
@@ -48,7 +49,7 @@ class VerifyCode extends StatelessWidget {
             },
             //runs when every textfield is filled
             onSubmit: (String verificationCode){
-             controller.goToResetPassword();
+              controller.goToSuccessSignUp();
             }, // end onSubmit
           ),
 
