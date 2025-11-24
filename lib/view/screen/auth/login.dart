@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_ecommerce/core/constant/color.dart';
+import 'package:flutter_app_ecommerce/view/screen/home.dart';
+import 'package:flutter_app_ecommerce/view/screen/onboarding.dart';
 import 'package:flutter_app_ecommerce/view/widget/auth/logoauth.dart';
 import 'package:flutter_app_ecommerce/view/widget/language/custombuttomlang.dart';
 
@@ -20,9 +22,9 @@ class Login extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
             centerTitle:true,
-            backgroundColor: AppColor.backgroundcolor,
+            backgroundColor: AppColor.primaryColor,
             elevation: 0.0,
-            title: Text('Sign In', style:Theme.of(context).textTheme.headline1!.copyWith(color: AppColor.grey))
+            title: Text('Sign In', style:Theme.of(context).textTheme.displayLarge!.copyWith(color: Colors.white))
         ),
         body: Container(
             padding: const EdgeInsets.symmetric(vertical: 15 , horizontal: 30),
@@ -48,13 +50,22 @@ class Login extends StatelessWidget {
               ) ,
              const Text("forget password",textAlign:TextAlign.end
                 ,) ,
-              CustomButtomAuth(text:"Sign In",onPressed:(){},),
+              CustomButtomAuth(text:"Sign In",onPressed:(){
+                // Home();
+                Navigator.pushNamed(context, '/home'); // استخدم اسم الـ "route" الذي عرفته
+                },),
+
+
+
             const  SizedBox(height: 30,),
             const  Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("Don't have an account ?"),
-                  InkWell(child: Text("Sign Up" , style: TextStyle(color:AppColor.primaryColor , fontWeight: FontWeight.bold )),
+                  InkWell(
+                    child: Text("Sign Up" , style: TextStyle(color:AppColor.primaryColor , fontWeight: FontWeight.bold ),
+                   // Navigator.push(OnBoarding())
+                    ),
                   )
                 ],
               )

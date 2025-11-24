@@ -20,22 +20,25 @@ class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
         itemBuilder: (context, i) => Column(
           children: [
             Text(onBoardingList[i].title!,
-                style:  Theme.of(context).textTheme.headline1),
-            const  SizedBox(height: 50),
+                style:  Theme.of(context).textTheme.displaySmall),
+            const  SizedBox(height: 30),
             Image.asset(onBoardingList[i].image!,fit:BoxFit.fill,),
-            const  SizedBox(height:80),
+            const  SizedBox(height:20),
             Container(
                 width: double.infinity,
                 alignment: Alignment.center,
                 child: Text(
                   onBoardingList[i].body!,
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: TextStyle( fontSize: 10)
 
-                )
+                ),
+
 
             )
+
           ],
+
         ));
   }
 }

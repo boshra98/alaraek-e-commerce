@@ -17,7 +17,7 @@ class CustomTextFormAuth extends StatelessWidget {
       decoration: InputDecoration(
 
       hintText: hinttext,
-      hintStyle:const  TextStyle(fontSize: 14),
+      hintStyle:const  TextStyle(fontSize: 12),
       floatingLabelBehavior: FloatingLabelBehavior.always,
       contentPadding: const EdgeInsets.symmetric(vertical:5 , horizontal: 30),
       label: Container(

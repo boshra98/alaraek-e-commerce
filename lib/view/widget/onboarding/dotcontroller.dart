@@ -25,10 +25,10 @@ class CustomDotControllerOnBoarding extends StatelessWidget {
               duration: const Duration(milliseconds: 900),
               width: controller.currentPage== index ? 20 : 5,
               //change the length of dot
-              height: 6,
+              height: 8,
               decoration: BoxDecoration(
                   color: AppColor.primaryColor,
-                  borderRadius: BorderRadius.circular(10)
+                  borderRadius: BorderRadius.circular(20)
               ),
             ))
       ],

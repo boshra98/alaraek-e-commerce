@@ -4,12 +4,18 @@ class MyTranslation extends Translations{
   @override
   // TODO: implement keys
   Map<String, Map<String, String>> get keys => {
-    "ar" : { "1": "اختر اللغة" ,
-      "2": "أهلا بعودتك"
+    "ar" : {
+      "1": "اختر اللغة" ,
+      "2": "أهلا بعودتك",
+      "3":"اختر منتج",
+      "4":" رجوع"
 
     } ,
-    "en" : { "1" :"Choose Language" ,
-      "2" :"welcome back"
+    "en" : {
+      "1" :"Choose Language" ,
+      "2" :"welcome back",
+      "3":"choose product",
+      "4":"back"
 
     }
   };
